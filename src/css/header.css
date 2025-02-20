@@ -6,7 +6,7 @@
 
 .container {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
@@ -75,6 +75,10 @@
 .btn__search:hover {
     cursor: pointer;
     opacity: .8;
+}
+
+.btn__search:active {
+    opacity: 1;
 }
 
 .settings {
