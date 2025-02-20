@@ -8,5 +8,6 @@
 .page__container {
     width: 85%;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
 }

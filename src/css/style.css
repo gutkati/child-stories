@@ -10,3 +10,7 @@
 /*main*/
 
 @import "./main.css";
+
+/*footer*/
+
+@import "footer.css";
