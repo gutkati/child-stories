@@ -6,7 +6,7 @@
     flex: 1;
 }
 
-.subtitle p {
+.subtitle-text {
     font-size: 24px;
     color: #454545;
     font-weight: 400;
@@ -14,13 +14,13 @@
 }
 
 @media (max-width: 1450px) {
-    .subtitle p {
+    .subtitle-text {
         margin: 15px 0 40px 0;
     }
 }
 
 @media (max-width: 1020px) {
-    .subtitle p {
+    .subtitle-text {
         font-size: 20px;
     }
 }
@@ -200,6 +200,7 @@
     box-sizing: border-box;
     border: 1px solid #D7D5D1;
     border-radius: 0 0 10px 10px;
+    background-color: #fff;
 }
 
 @media (max-width: 1020px) {
@@ -280,5 +281,9 @@
     color: #9F9C90;
     font-weight: 600;
     margin: 0;
+}
+
+.dark-subtitle {
+    color: #E4E4E4;
 }
 
