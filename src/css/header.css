@@ -4,10 +4,30 @@
     align-items: start;
 }
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}
+
 .container {
     display: flex;
     gap: 50px;
     align-items: center;
+}
+
+@media (max-width: 1020px) {
+    .container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 15px;
+    }
 }
 
 .container_align {
@@ -20,9 +40,12 @@
     align-items: center;
 }
 
-.logo__img {
-
+@media (max-width: 1020px) {
+    .logo__img {
+        width: 52px;
+    }
 }
+
 
 .logo__span {
     color: #B9B5A9;
@@ -37,11 +60,43 @@
     margin: 0;
 }
 
+@media (max-width: 1020px) {
+    .title {
+        font-size: 36px;
+    }
+}
+
 .search {
     display: flex;
     justify-content: space-between;
     width: 370px;
     height: 48px;
+}
+
+@media (max-width: 1020px) {
+    .search {
+        height: 44px;
+        width: 344px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        width: 65vw;
+        gap: 7px;
+    }
+}
+
+@media (max-width: 560px) {
+    .search {
+        width: 83vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .search {
+        width: 93vw;
+    }
 }
 
 .inp__text {
@@ -53,6 +108,18 @@
     padding: 15px;
     box-sizing: border-box;
     color: #454545;
+}
+
+@media (max-width: 1020px) {
+    .inp__text {
+        width: 282px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inp__text {
+        flex-grow: 2;
+    }
 }
 
 .inp__text::placeholder {
@@ -72,6 +139,13 @@
     transition: opacity .2s ease;
 }
 
+@media (max-width: 1020px) {
+    .btn__search {
+        width: 55px;
+        height: 44px;
+    }
+}
+
 .btn__search:hover {
     cursor: pointer;
     opacity: .8;
@@ -87,7 +161,27 @@
     gap: 15px;
 }
 
+@media (max-width: 768px) {
+    .settings {
+        position: absolute;
+        right: 0;
+        top: 25px;
+    }
+}
+
 .hover:hover {
     cursor: pointer;
     opacity: .7;
+}
+
+@media (max-width: 768px) {
+    .star {
+        width: 27px;
+        height: 25px;
+    }
+
+    .sun {
+        width: 25px;
+        height: 25px;
+    }
 }

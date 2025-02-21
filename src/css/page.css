@@ -6,8 +6,53 @@
 }
 
 .page__container {
-    width: 85%;
+    width: 75%;
+    height: 100vh;
     margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1380px) {
+    .page__container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1180px) {
+    .page__container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1020px) {
+    .page__container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page__container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 560px) {
+    .page__container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    .page__container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 370px) {
+    .page__container {
+        padding: 5px;
+    }
 }
