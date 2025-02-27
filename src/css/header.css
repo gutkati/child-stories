@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -14,14 +15,8 @@
 
 .container {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
-}
-
-@media (max-width: 1020px) {
-    .container {
-        gap: 30px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -60,11 +55,42 @@
     margin: 0;
 }
 
+.title_size {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.age-child {
+    margin: 0;
+    font-size: 20px;
+}
+
 @media (max-width: 1020px) {
     .title {
         font-size: 36px;
     }
+
+    .title_size {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .age-child {
+        font-size: 16px;
+    }
 }
+
+@media (max-width: 850px) {
+    .title_size {
+        width: 130px;
+        margin: 0;
+    }
+
+    .age-child {
+        font-size: 16px;
+    }
+}
+
 
 .search {
     display: flex;
@@ -144,6 +170,11 @@
         width: 55px;
         height: 44px;
     }
+
+    .btn__search img {
+        width: 24px;
+        height: 27px;
+    }
 }
 
 .btn__search:hover {
@@ -161,17 +192,31 @@
     gap: 15px;
 }
 
+.sun {
+    width: 30px;
+    height: 30px;
+}
+
+.star {
+    position: relative;
+}
+
 @media (max-width: 768px) {
     .settings {
         position: absolute;
         right: 0;
-        top: 25px;
+        top: 20px;
     }
 }
 
 .hover:hover {
     cursor: pointer;
     opacity: .7;
+    position: relative;
+}
+
+.hover:active {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -186,6 +231,36 @@
     }
 }
 
-.dark-title {
+.dark-text {
     color: #E4E4E4;
+}
+
+.inp__text_dark {
+    color: #D7D5D1;
+}
+
+.favorites {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    width: max-content;
+    padding: 7px;
+    background-color: #BBBDBF;
+    border-radius: 5px;
+    text-align: center;
+
+    opacity: 0;
+    pointer-events: none; /* Не даёт подсказке перекрывать курсор */
+    white-space: nowrap; /* Запрещает перенос текста */
+    transition: opacity 0.3s ease
+}
+
+.favorites p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.star:hover ~ .favorites {
+    opacity: 1;
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Страница раздела</title>
+</head>
+<body class="page">
+<div class="page__container">
+    <header class="header">
+        <div class="container container_align">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="логотип" class="logo__img">
+                <span class="logo__span">skazki.prx.by</span>
+            </div>
+            <h1 class="title title_size">Сказки <span class="age-child">детям 2-3 лет</span></h1>
+        </div>
+
+        <div class="container">
+            <div class="search">
+                <input type="text" name="" id="inp-section" class="inp__text" placeholder="поиск сказки">
+                <button class="btn__search">
+                    <img src="../assets/icons/search.png" alt="лупа">
+                </button>
+            </div>
+
+            <div class="settings">
+                <img src="../assets/icons/star.png" alt="звезда" class="star hover " data-title="Избранное">
+                <img src="../assets/icons/sun.png" alt="солнце" class="sun hover">
+                <div class="favorites">
+                    <p>Избранное</p>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="main">
+
+        <div class="box-link__main">
+            <a href="./index.html" class="link__main">главная
+                <hr>
+            </a>
+        </div>
+
+        <section class="section-pagination">
+            <label class="container__checkbox">
+                <input type="checkbox">
+                <span class="check__mark"></span>
+                <span class="check__text">скрыть прочитанные сказки</span>
+            </label>
+
+            <!--                добавятся кнопки пагинации-->
+
+            <div class="pagination">
+                <button class="left-arrow-up arrow"><img src="../assets/icons/left-arrow.png" alt=""></button>
+                <button class="right-arrow-up arrow"><img src="../assets/icons/right-arrow.png" alt=""></button>
+            </div>
+
+        </section>
+
+        <section class="list__tale" id="items">
+            <!--            здесь будут рендериться элементы текущей страницы-->
+        </section>
+
+        <div class="pagination-bottom">
+            <button class="left-arrow-bot arrow"><img src="../assets/icons/left-arrow.png" alt=""></button>
+            <button class="right-arrow-bot arrow"><img src="../assets/icons/right-arrow.png" alt=""></button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__text">
+            <p class="footer__authors">Екатерина Шмелева/Максим Леончик 2025</p>
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</div>
+
+</body>
+</html>
