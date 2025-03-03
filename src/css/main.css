@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     flex: 1;
+    position: relative;
 }
 
 .subtitle-text {
@@ -158,6 +159,11 @@
 .nav__link {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 /*card-list*/
@@ -211,26 +217,15 @@
     max-width: 250px; /* Опционально, чтобы карточки не растягивались слишком сильно */
     min-height: 285px;
 
-    /*width: 224px;*/
     box-sizing: border-box;
     border: 1px solid #D7D5D1;
     border-radius: 0 0 10px 10px;
     background-color: #fff;
 }
 
-/*@media (max-width: 1020px) {*/
-/*    .card {*/
-/*        width: 184px;*/
-/*        min-height: 260px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 600px) {*/
-/*    .card {*/
-/*        width: 164px;*/
-/*        min-height: 235px;*/
-/*    }*/
-/*}*/
+.card:hover {
+    box-shadow: 0 0 6px #8e8a80;
+}
 
 .card__img {
     width: 100%;
@@ -241,21 +236,8 @@
 .card__img img {
     object-fit: cover;
     width: 100%;
-    /*max-width: 222px;*/
     height: 228px;
 }
-
-/*@media (max-width: 1020px) {*/
-/*    .card__img img {*/
-/*        width: 182px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 600px) {*/
-/*    .card__img img {*/
-/*        width: 162px;*/
-/*    }*/
-/*}*/
 
 .card__time {
     position: absolute;
@@ -263,7 +245,7 @@
     top: 0;
     min-width: 70px;
     height: 22px;
-    background-color: #D9D9D9;
+    background-color: #BBBDBF;
     border-radius: 0 0 0 5px;
     color: #fff;
     font-size: 14px;
@@ -312,16 +294,23 @@
     justify-content: space-between;
 }
 
-/*section pagination*/
-
 .link__main {
     text-decoration: none;
     color: #9F9C90;
 }
 
 .link__main hr {
-    margin-top: 3px;
+    height: 2px;
+    border: none;
+    background-color: #275950;
+    margin: 3px 0 0;
 }
+
+.link__main hr:active {
+    box-shadow: 0 0 10px #8e8a80;
+}
+
+/*section pagination*/
 
 .section-pagination {
     margin-top: 10px;
@@ -485,7 +474,153 @@
     }
 }
 
+/*section fairytale*/
 
+.main__fairytale {
+    width: 100%;
+}
 
+.fairytale {
+    line-height: 2;
+    text-align: justify;
+    hyphens: auto; /* Автоматический перенос слов */
+    -webkit-hyphens: auto; /* Для поддержки в Safari */
+    -ms-hyphens: auto; /* Для поддержки в старых версиях Edge */
+    word-wrap: break-word; /* Перенос длинных слов */
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px 0 20px;
+}
 
+@media (max-width: 768px) {
+    .fairytale {
+        margin: 10px 0 20px;
+    }
+}
+
+.container__btn {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.btn__style {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    transition: transform ease 0.2s;
+}
+
+.btn__style:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.btn-up__page {
+    background-image: url("../assets/icons/btn-up.png");
+    display: none;
+}
+
+.btn-save__favorites {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+/*settings*/
+
+.modal__settings {
+    width: 390px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    position: absolute;
+    top: 95px;
+    right: 40px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+
+.btn__close:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.btn__close:active {
+    opacity: 1;
+}
+
+.modal__title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #275950;
+    margin: 0;
+}
+
+.modal__font-size {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.div__size {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.div__size label {
+    font-size: 12px;
+    color: #9F9C90;
+}
+
+.modal__font-family {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.modal__settings select {
+    appearance: none; /* Убирает стандартный стиль браузера */
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none; /* Firefox */
+
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 10px;
+    color: #454545;
+    cursor: pointer;
+
+    background-image: url('../assets/icons/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    border: none;
+    border-radius: 20px 0 20px 20px;
+}
+
+.modal__settings select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 

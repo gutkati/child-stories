@@ -1,6 +1,6 @@
 .page {
     background-color: #FAFAFA;
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: Aria, sans-serif;
     color: #454545;
     font-size: 16px;
     height: 100%;
@@ -50,6 +50,9 @@
 @media (max-width: 768px) {
     .page__container {
         width: 70%;
+    }
+    .page__container_fairytale {
+        width: 90%;
     }
 }
 
