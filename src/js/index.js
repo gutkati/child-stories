@@ -1,47 +1,36 @@
-let page = document.querySelector('.page')
-let title = document.querySelector('.title')
-let subtitle = document.querySelector('.subtitle-text')
-let btnSwitchTheme = document.querySelector('.sun')
-// let inputMain = document.querySelector('#inp-main')
-// let inputSection = document.querySelector('#inp-section')
-let inputSearch = document.querySelector('.inp__text')
-let fairytale = document.querySelector('.fairytale')
+import {arrayCards} from "../arrays/arrayCards.js";
 
-// тема ночная/дневная
-// При загрузке страницы проверяем тему
-if (localStorage.getItem("theme") === "dark") {
-    page.classList.add('dark-back');
-    title.classList.add('dark-text');
-    subtitle ? subtitle.classList.add('dark-subtitle') : ""
-    inputSearch ? inputSearch.classList.add('dark-text') : ""
-    fairytale ? fairytale.classList.toggle('dark-text') : ""
-    btnSwitchTheme.src = '../assets/icons/month.png';
-} else {
-    btnSwitchTheme.src = '../assets/icons/sun.png';
-}
+let randomIndexCards = getRandomIndexCards(arrayCards)
 
-btnSwitchTheme.addEventListener('click', switchTheme)
+const items = randomIndexCards.map(numCard => {
+    let card = arrayCards[numCard]
 
-function switchTheme() {
-    console.log("Функция switchTheme вызвана")
-    let iconName = btnSwitchTheme.src.split('/').pop() // Получаем только имя файла
+    return `<div class="card">
+        <a href="../pages/fairytale.html" class="card__img">
+            <img src="${card.img}" alt="${card.name}">
+                <div class="card__time">
+                    <p class="time">${card.time} мин</p>
+                </div>
+        </a>
+        <div class="card__info">
+            <p class="card_title">${card.name}</p>
+            <p class="card__author">${card.author}</p>
+        </div>
+    </div>`
+})
 
-    page.classList.toggle('dark-back')
-    title.classList.toggle('dark-text')
-    subtitle ? subtitle.classList.toggle('dark-subtitle') : ""
-    inputSearch ? inputSearch.classList.toggle('dark-text') : ""
-    fairytale ? fairytale.classList.toggle('dark-text') : ""
+document.getElementById("items-main").innerHTML = items.join("")
 
-    btnSwitchTheme.src = (iconName === 'sun.png')
-        ? '../assets/icons/month.png'
-        : '../assets/icons/sun.png'
+function getRandomIndexCards(array) {
+    let minNum = 0
+    let maxNum = array.length
+    let arrNum = []
 
-    if (page.classList.contains('dark-back')) {
-        console.log("Добавляем dark в localStorage");
-        localStorage.setItem("theme", "dark");
-    } else {
-        console.log("Добавляем light в localStorage");
-        localStorage.setItem("theme", "light");
+    for (let i = 1; i <= 4; i++) {
+        let randomNumber = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
+        if (!arrNum.includes(randomNumber)) {
+            arrNum.push(randomNumber)
+        }
     }
+    return arrNum
 }
-

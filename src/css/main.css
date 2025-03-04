@@ -99,7 +99,8 @@
 
 .child_yellow {
     width: 140px;
-    background-color: #FAC829;
+    background-color: #f1c539;
+    /*background-color: #f3c733;*/
     flex-grow: 1;
 }
 
