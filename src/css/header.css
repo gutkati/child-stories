@@ -79,6 +79,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 
 @media (max-width: 1020px) {
@@ -110,6 +111,18 @@
     text-align: center;
     margin: 0;
     width: 100%;
+}
+
+.title a {
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+
+.title a:hover {
+    opacity: .8;
 }
 
 .age-child {
@@ -176,19 +189,6 @@
         gap: 7px;
     }
 }
-
-/*@media (max-width: 560px) {*/
-/*    .search {*/
-/*        max-width: 100%;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 450px) {*/
-/*    .search {*/
-
-/*        !*width: 320px;*!*/
-/*    }*/
-/*}*/
 
 .inp__text {
     outline: none;
@@ -264,6 +264,8 @@
 
 .star {
     position: relative;
+    width: 33px;
+    height: 30px;
 }
 
 @media (max-width: 768px) {
@@ -339,6 +341,22 @@
     display: flex;
     width: 150px;
     justify-content: space-between;
+}
+
+.header__btn-back {
+    width: 40px;
+    height: 40px;
+    background-color: #ececec;
+    border-radius: 50%;
+    background-image: url("../assets/icons/arrow-back.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform ease 0.2s;
+}
+
+.header__btn-back:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /*.link__main hr {*/

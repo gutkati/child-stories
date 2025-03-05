@@ -2,12 +2,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .footer__text {
-    padding-top: 10px;
     box-sizing: border-box;
 }
 

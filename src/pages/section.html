@@ -10,41 +10,41 @@
 <div class="page__container">
     <header class="header">
         <div class="container container_align">
-            <div class="logo">
+            <a href="./index.html" class="logo">
                 <img src="../assets/images/logo.png" alt="логотип" class="logo__img">
                 <span class="logo__span">skazki.prx.by</span>
-            </div>
-            <h1 class="title title_size">Сказки <span class="age-child">малышам</span></h1>
+            </a>
+            <h1 class="title title_size"><a href="./index.html" class="title_size">Сказки</a> <span class="age-child">малышам</span>
+            </h1>
         </div>
 
         <div class="container">
-            <div class="search">
-                <input type="text" name="" id="inp-section" class="inp__text" placeholder="поиск сказки">
-                <button class="btn__search">
+
+            <form action="/" method="GET" class="search">
+                <input type="text" name="query" id="inp-section" class="inp__text" placeholder="поиск сказки">
+                <button type="submit" class="btn__search">
                     <img src="../assets/icons/search.png" alt="лупа">
                 </button>
-            </div>
+            </form>
 
             <div class="settings">
-                <img src="../assets/icons/star.png" alt="звезда" class="star hover " data-title="Избранное">
+                <a href="./favorites.html">
+                    <img src="../assets/icons/star.png" alt="звезда" class="star hover" data-title="Избранное">
+                    <div class="favorites">
+                        <p>Избранное</p>
+                    </div>
+                </a>
                 <img src="../assets/icons/sun.png" alt="солнце" class="sun hover">
                 <div class="favorites">
                     <p>Избранное</p>
                 </div>
             </div>
-        </div>
 
+        </div>
 
     </header>
 
     <main class="main">
-
-        <div class="box-link__main">
-            <a href="./index.html" class="link__main">
-                Главная
-                <hr>
-            </a>
-        </div>
 
         <section class="section-pagination">
             <label class="container__checkbox">
@@ -53,22 +53,130 @@
                 <span class="check__text">скрыть прочитанные сказки</span>
             </label>
 
-            <!--                добавятся кнопки пагинации-->
-
             <div class="pagination">
                 <button class="left-arrow-up arrow"><img src="../assets/icons/left-arrow.png" alt=""></button>
+                <button class="btn-num">1</button>
+                <button class="btn-num">2</button>
+                <span class="ellipses">...</span>
+                <button class="btn-num btn-num_mark">3</button>
+                <button class="btn-num">4</button>
+                <span class="ellipses">...</span>
+                <button class="btn-num">7</button>
+                <button class="btn-num">8</button>
                 <button class="right-arrow-up arrow"><img src="../assets/icons/right-arrow.png" alt=""></button>
             </div>
 
         </section>
 
         <section class="list__tale" id="items">
-            <!--            здесь будут рендериться карточки текущей страницы-->
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__img">
+                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                    <div class="card__time">
+                        <p class="time">7 мин</p></div>
+                </a>
+                <div class="card__info">
+                    <p class="card__title">Три поросенка</p>
+                    <p class="card__author">Сергей Михалков</p>
+                </div>
+            </div>
         </section>
 
-        <div class="pagination-bottom">
-            <button class="left-arrow-bot arrow"><img src="../assets/icons/left-arrow.png" alt=""></button>
-            <button class="right-arrow-bot arrow"><img src="../assets/icons/right-arrow.png" alt=""></button>
+        <div class="pagination">
+            <button class="left-arrow-up arrow"><img src="../assets/icons/left-arrow.png" alt=""></button>
+            <button class="btn-num">1</button>
+            <button class="btn-num">2</button>
+            <span class="ellipses">...</span>
+            <button class="btn-num btn-num_mark">3</button>
+            <button class="btn-num">4</button>
+            <span class="ellipses">...</span>
+            <button class="btn-num">7</button>
+            <button class="btn-num">8</button>
+            <button class="right-arrow-up arrow"><img src="../assets/icons/right-arrow.png" alt=""></button>
         </div>
     </main>
 
@@ -77,9 +185,9 @@
             <p class="footer__authors">Екатерина Шмелева/Максим Леончик 2025</p>
         </div>
     </footer>
-    <script type="module" src="../js/pagination.js"></script>
+    <!--    <script type="module" src="../js/pagination.js"></script>-->
     <script type="module" src="../js/night-mode.js"></script>
-
+    <script type="module" src="../js/back-home.js"></script>
 </div>
 
 </body>

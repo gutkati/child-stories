@@ -5,18 +5,33 @@ let btnSwitchTheme = document.querySelector('.sun')
 let inputSearch = document.querySelector('.inp__text')
 let fairytale = document.querySelector('.fairytale')
 
-
 // тема ночная/дневная
 // При загрузке страницы проверяем тему
-if (localStorage.getItem("theme") === "dark") {
-    page.classList.add('dark-back');
-    title.classList.add('dark-text');
-    subtitle ? subtitle.classList.add('dark-subtitle') : ""
-    inputSearch ? inputSearch.classList.add('dark-text') : ""
-    fairytale ? fairytale.classList.toggle('dark-text') : ""
-    btnSwitchTheme.src = '../assets/icons/month.png';
-} else {
-    btnSwitchTheme.src = '../assets/icons/sun.png';
+
+// применит тему при каждом возврате на страницу
+window.addEventListener("pageshow", applyTheme)
+
+// убедиться, что все элементы загружены перед применением классов:
+document.addEventListener("DOMContentLoaded", () => {
+    applyTheme()
+})
+
+function applyTheme() {
+    if (localStorage.getItem("theme") === "dark") {
+        page.classList.add('dark-back');
+        title.classList.add('dark-text');
+        subtitle ? subtitle.classList.add('dark-subtitle') : ""
+        inputSearch ? inputSearch.classList.add('dark-text') : ""
+        fairytale ? fairytale.classList.add('dark-text') : ""
+        btnSwitchTheme.src = '../assets/icons/month.png';
+    } else {
+        page.classList.remove('dark-back');
+        title.classList.remove('dark-text');
+        subtitle?.classList.remove('dark-subtitle');
+        inputSearch?.classList.remove('dark-text');
+        fairytale?.classList.remove('dark-text');
+        btnSwitchTheme.src = '../assets/icons/sun.png';
+    }
 }
 
 btnSwitchTheme.addEventListener('click', switchTheme)
@@ -36,10 +51,11 @@ function switchTheme() {
         : '../assets/icons/sun.png'
 
     if (page.classList.contains('dark-back')) {
-        console.log("Добавляем dark в localStorage");
-        localStorage.setItem("theme", "dark");
+        console.log("Добавляем dark в localStorage")
+        localStorage.setItem("theme", "dark")
     } else {
-        console.log("Добавляем light в localStorage");
-        localStorage.setItem("theme", "light");
+        console.log("Добавляем light в localStorage")
+        localStorage.setItem("theme", "light")
     }
 }
+
