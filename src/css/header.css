@@ -264,7 +264,7 @@
 
 .star {
     position: relative;
-    width: 33px;
+    width: 32px;
     height: 30px;
 }
 
@@ -303,6 +303,10 @@
 }
 
 .dark-text {
+    color: #E4E4E4;
+}
+
+.dark-text_fairytale {
     color: #E4E4E4;
 }
 
@@ -352,6 +356,13 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform ease 0.2s;
+}
+
+.header__btn-back_fairytale {
+    position: fixed;
+    top: 20px;
+    left: 110px;
+    z-index: 100;
 }
 
 .header__btn-back:hover {

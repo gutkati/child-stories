@@ -1,4 +1,6 @@
 let btnBack = document.getElementById('btn-back')
-btnBack.addEventListener('click', () => {
-     window.history.back();
-})
+if (btnBack) {
+    btnBack.addEventListener('click', () => {
+        window.history.back();
+    })
+}

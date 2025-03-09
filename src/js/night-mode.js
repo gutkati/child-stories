@@ -1,4 +1,5 @@
 let page = document.querySelector('.page')
+let pageFairytale = document.querySelector('.page_fairytale')
 let title = document.querySelector('.title')
 let subtitle = document.querySelector('.subtitle-text')
 let btnSwitchTheme = document.querySelector('.sun')
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function applyTheme() {
     if (localStorage.getItem("theme") === "dark") {
         page.classList.add('dark-back');
+        pageFairytale ? pageFairytale.classList.add('dark-back') : ""
         title.classList.add('dark-text');
         subtitle ? subtitle.classList.add('dark-subtitle') : ""
         inputSearch ? inputSearch.classList.add('dark-text') : ""
@@ -26,6 +28,7 @@ function applyTheme() {
         btnSwitchTheme.src = '../assets/icons/month.png';
     } else {
         page.classList.remove('dark-back');
+        pageFairytale ? pageFairytale.classList.remove('dark-back') : ""
         title.classList.remove('dark-text');
         subtitle?.classList.remove('dark-subtitle');
         inputSearch?.classList.remove('dark-text');
@@ -37,10 +40,10 @@ function applyTheme() {
 btnSwitchTheme.addEventListener('click', switchTheme)
 
 function switchTheme() {
-    console.log("Функция switchTheme вызвана")
     let iconName = btnSwitchTheme.src.split('/').pop() // Получаем только имя файла
 
     page.classList.toggle('dark-back')
+    pageFairytale ? pageFairytale.classList.toggle('dark-back') : ""
     title.classList.toggle('dark-text')
     subtitle ? subtitle.classList.toggle('dark-subtitle') : ""
     inputSearch ? inputSearch.classList.toggle('dark-text') : ""
@@ -51,11 +54,8 @@ function switchTheme() {
         : '../assets/icons/sun.png'
 
     if (page.classList.contains('dark-back')) {
-        console.log("Добавляем dark в localStorage")
         localStorage.setItem("theme", "dark")
     } else {
-        console.log("Добавляем light в localStorage")
         localStorage.setItem("theme", "light")
     }
 }
-
