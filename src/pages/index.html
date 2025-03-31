@@ -2,13 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Сказки на ночь для детей и взрослых. Читайте онлайн: народные, авторские, поучительные и волшебные сказки. Добавляйте в избранное и продолжайте чтение с того места, где остановились.">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Сказки</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <title>Сказки для детей читать онлайн</title>
 </head>
 <body class="page">
 <div class="page__container">
     <header class="header">
+
         <div class="container container_align">
             <div class="logo">
                 <img src="../assets/images/logo.png" alt="логотип" class="logo__img">
@@ -26,112 +29,163 @@
             </form>
 
             <div class="settings">
-                <a href="./favorites.html">
-                    <img src="../assets/icons/star.png" alt="звезда" class="star hover" data-title="Избранное">
-                    <div class="favorites">
-                        <p>Избранное</p>
-                    </div>
-                </a>
                 <img src="../assets/icons/sun.png" alt="солнце" class="sun hover">
-
             </div>
         </div>
 
     </header>
 
     <main class="main">
+        <!--        Закладки-->
+        <section class="bookmarks">
+            <div class="bookmarks__container"></div>
+        </section>
+
         <section class="subtitle">
             <p class="subtitle-text">Мы собрали для вас самые известные и любимые сказки для детей.</p>
         </section>
+
         <nav class="navigation">
-            <div class="baby flex"><a href="./section.html" class="nav__link">Малышам</a></div>
-            <div class="child3 flex child_yellow"><a href="./section.html" class="nav__link">Детям 3 лет</a></div>
-            <div class="child4 flex child_red"><a href="./section.html" class="nav__link">Детям 4 лет</a></div>
-            <div class="child5 flex child_yellow"><a href="./section.html" class="nav__link">Детям 5 лет</a></div>
-            <div class="child6 flex child_red"><a href="./section.html" class="nav__link">Детям 6 лет</a></div>
-            <div class="child7 flex child_yellow"><a href="./section.html" class="nav__link">Детям 7 лет</a></div>
-            <div class="child8 flex child_red"><a href="./section.html" class="nav__link">Детям 8 лет</a></div>
+            <div class="baby flex"><a href="./section.html?age=малышам" class="nav__link">Малышам</a></div>
+            <div class="child3 flex child_yellow"><a href="./section.html?age=детям 2-3 лет" class="nav__link">Детям 3
+                лет</a></div>
+            <div class="child4 flex child_red"><a href="./section.html?age=детям 3-4 лет" class="nav__link">Детям 4
+                лет</a></div>
+            <div class="child5 flex child_yellow"><a href="./section.html?age=детям 4-5 лет" class="nav__link">Детям 5
+                лет</a></div>
+            <div class="child6 flex child_red"><a href="./section.html?age=детям 5-6 лет" class="nav__link">Детям 6
+                лет</a></div>
+            <div class="child7 flex child_yellow"><a href="./section.html?age=детям 6-7 лет" class="nav__link">Детям 7
+                лет</a></div>
+            <div class="child8 flex child_red"><a href="./section.html?age=детям 7-8 лет" class="nav__link">Детям 8
+                лет</a></div>
         </nav>
+
         <section class="list__tale" id="items-main">
+
             <div class="card">
-                <a href="../pages/fairytale.html" class="card__img">
-                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
-                    <div class="card__time">
-                        <p class="time">7 мин</p></div>
-                </a>
-                <div class="card__info">
-                    <div class="card__title-box">
-                        <p class="card__title">Три поросенка</p>
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
                     </div>
 
-                    <div class="card__author-box">
-                        <p class="card__author">Сергей Михалков</p>
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="card">
-                <a href="../pages/fairytale.html" class="card__img">
-                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
-                    <div class="card__time">
-                        <p class="time">7 мин</p></div>
-                </a>
-                <div class="card__info">
-                    <div class="card__title-box">
-                        <p class="card__title">Три поросенка</p>
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/barashki.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
                     </div>
 
-                    <div class="card__author-box">
-                        <p class="card__author">Сергей Михалков</p>
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="card">
-                <a href="../pages/fairytale.html" class="card__img">
-                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
-                    <div class="card__time">
-                        <p class="time">7 мин</p></div>
-                </a>
-                <div class="card__info">
-                    <div class="card__title-box">
-                        <p class="card__title">Три поросенка</p>
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/gribok.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
                     </div>
 
-                    <div class="card__author-box">
-                        <p class="card__author">Сергей Михалков</p>
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="card">
-                <a href="../pages/fairytale.html" class="card__img">
-                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
-                    <div class="card__time">
-                        <p class="time">7 мин</p></div>
-                </a>
-                <div class="card__info">
-                    <div class="card__title-box">
-                        <p class="card__title">Три поросенка</p>
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/snegurushka.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
                     </div>
 
-                    <div class="card__author-box">
-                        <p class="card__author">Сергей Михалков</p>
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__text">
-            <p class="footer__authors">Екатерина Шмелева/Максим Леончик 2025</p>
+        <div class="footer-develop">
+            <a href="https://github.com/gutkati" class="footer__box" target="_blank">
+                <p class="footer__text">Frontend</p>
+                <p class="footer__authors">Екатерина Шмелева</p>
+            </a>
+
+            <span class="footer__date"></span>
+
+            <a href="https://lemaxdeveloper.su" class="footer__box" target="_blank"  rel="noopener noreferrer">
+                <p class="footer__text">Backend</p>
+                <p class="footer__authors">Максим Леончик</p>
+            </a>
         </div>
+
     </footer>
 
-    <script type="module" src="../js/index.js"></script>
-    <script type="module" src="../js/night-mode.js"></script>
 </div>
 
+<script type="module" src="../js/index.js"></script>
+<script type="module" src="../js/night-mode.js"></script>
 </body>
 </html>

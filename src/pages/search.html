@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
     <title>Результаты поиска</title>
 </head>
 
 <body class="page">
 <div class="page__container">
     <header class="header">
+
         <div class="container container_align">
             <a href="./index.html" class="logo">
                 <img src="../assets/images/logo.png" alt="логотип" class="logo__img">
@@ -27,16 +29,13 @@
             </form>
 
             <div class="settings">
-                <a href="./favorites.html">
-                    <img src="../assets/icons/star.png" alt="звезда" class="star hover" data-title="Избранное">
-                    <div class="favorites">
-                        <p>Избранное</p>
-                    </div>
-                </a>
+
                 <img src="../assets/icons/sun.png" alt="солнце" class="sun hover">
-                <div class="favorites">
-                    <p>Избранное</p>
-                </div>
+
+                <!--               !!!!!!! убрать из кода-->
+                <!--                <div class="favorites">-->
+                <!--                    <p>Избранное</p>-->
+                <!--                </div>-->
             </div>
         </div>
 
@@ -44,37 +43,130 @@
 
     <main class="main">
 
+        Закладки
+        <section class="bookmarks">
+            <div class="bookmarks__container"></div>
+        </section>
+
         <div class="box-link__main">
             <div class="header__btn-back" id="btn-back"></div>
         </div>
 
+        <!--        Если сказка найдена применяется эта секция-->
         <section class="list__tale" id="items-main">
+            <!--            !!!!!! все карточки изменились перенеси их заново, -->
+            <!--            изменилась вложенность и добавился новый вкласс container-card__link-->
             <div class="card">
-                <a href="../pages/fairytale.html" class="card__img">
-                    <img src="../assets/images/tri-porosenka.jpg" alt="три поросенка">
-                    <div class="card__time">
-                        <p class="time">7 мин</p></div>
-                </a>
-                <div class="card__info">
-                    <p class="card__title">Три поросенка</p>
-                    <p class="card__author">Сергей Михалков</p>
-                </div>
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/snegurushka.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
 
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/snegurushka.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="../pages/fairytale.html" class="card__link" target="_blank">
+                    <div class="container-card__link">
+                        <img src="../assets/images/snegurushka.jpg" alt="три поросенка">
+                        <div class="card__time">
+                            <p class="time">7 мин</p>
+                        </div>
+
+                        <div class="card__mark-read">
+                            <p>Прочитано</p>
+                        </div>
+                    </div>
+
+                    <div class="card__info">
+                        <div class="card__title-box">
+                            <p class="card__title">Колобок</p>
+                        </div>
+
+                        <div class="card__author-box">
+                            <p class="card__author">Сергей Михалков</p>
+                        </div>
+                    </div>
+                </a>
             </div>
 
         </section>
 
+        <!--        Если сказка не найдена применяется эта секция-->
+
+        <!--        <section class="list__message" id="message-main">-->
+        <!--            <p class="subtitle-text">К сожалению, по вашему запросу ничего не найдено.</p>-->
+        <!--            <div class="message__img-decor">-->
+        <!--                <img class="message__img" src="../assets/images/chicken.png" alt="Курочка">-->
+        <!--            </div>-->
+
+        <!--        </section>-->
+
     </main>
 
     <footer class="footer">
-        <div class="footer__text">
-            <p class="footer__authors">Екатерина Шмелева/Максим Леончик 2025</p>
+        <div class="footer-develop">
+            <a href="https://github.com/gutkati" class="footer__box" target="_blank">
+                <p class="footer__text">FRONTEND</p>
+                <p class="footer__authors">Екатерина Шмелева</p>
+            </a>
+
+            <span class="footer__date"></span>
+
+            <a href="https://lemaxdeveloper.su" class="footer__box" target="_blank">
+                <p class="footer__text">BACKEND</p>
+                <p class="footer__authors">Максим Леончик</p>
+            </a>
         </div>
+
     </footer>
-    <script type="module" src="../js/night-mode.js"></script>
-    <script type="module" src="../js/back-home.js"></script>
+
 </div>
 
+<script type="module" src="../js/index.js"></script>
+<script type="module" src="../js/night-mode.js"></script>
+<script type="module" src="../js/back-home.js"></script>
 </body>
 
 </html>
